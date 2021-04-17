@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+//(29) template class
+template<class t>
+class arithmetic
+{
+private:
+	t x;
+	t y;
+public:
+	arithmetic(t x, t y);
+	t add();
+	t subtract();
+};
+template<class t>
+arithmetic<t>::arithmetic(t x, t y)
+{
+	this->x = x;
+	this->y = y;
+}
+template<class t>
+t arithmetic<t>::add()
+{
+	t c;
+	c = x + y;
+	return c;
+}
+template<class t>
+t arithmetic<t>::subtract()
+{
+	t c;
+	c = x - y;
+	return c;
+}
+
+
+
+int main()
+{
+#ifndef ONLINE_JUDGE
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
+#endif
+	arithmetic<char> ar('A', 'B');
+	cout << (int)ar.add() << " " << (int)ar.subtract();
+	return 0;
+}
