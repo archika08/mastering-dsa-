@@ -1,0 +1,64 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+//(28) C++ class
+class rectangle
+{
+private:                               //member function of class
+	int length;
+	int breadth;
+public:
+	rectangle()                     //default constructor
+	{
+		length = 0;
+		breadth = 0;
+	}
+	rectangle(int l, int b)              //parameterized constructor
+	{
+		length = l;
+		breadth = b;
+	}
+
+	void initialise( int l , int b)
+	{
+		length = l;
+		breadth = b;
+
+	}
+	int area()                             //facilitators
+	{
+		return (length * breadth);
+	}
+	int perimeter()
+	{
+		return (2 * (length + breadth));
+	}
+
+	void setlength( int l)                //setter
+	{
+		length = l;
+
+	}
+	void setbreadth( int b)
+	{
+		breadth = b;
+
+	}
+	~rectangle()
+	{
+		cout << "destructor";
+	}
+};
+int main()
+{
+#ifndef ONLINE_JUDGE
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
+#endif
+	struct rectangle r;
+	int l, b;
+	cin >> l >> b;
+	r.initialise(l, b);
+	cout << r.area() << " ";
+	return 0;
+}
